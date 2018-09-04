@@ -11,15 +11,19 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         tv_val.setOnClickListener {
-            val intent = Intent(this, VariableActivity::class.java)
+            val intent = Intent(this@MainActivity, VariableActivity::class.java)
             startActivity(intent)
         }
         tv_control_flow.setOnClickListener {
-            val intent = Intent(this, ControlFlowActivity::class.java)
+            val intent = Intent(this@MainActivity, ControlFlowActivity::class.java)
             startActivity(intent)
         }
         tv_operator.setOnClickListener {
-            val intent = Intent(this, OperatorActivity::class.java)
+            val intent = Intent(this@MainActivity, OperatorActivity::class.java)
+            startActivity(intent)
+        }
+        tv_extend.setOnClickListener {
+            val intent = Intent(this@MainActivity, ExtendActivity::class.java)
             startActivity(intent)
         }
     }

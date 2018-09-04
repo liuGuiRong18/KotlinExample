@@ -27,6 +27,14 @@
         <activity
             android:name=".OperatorActivity"
             android:label="@string/title_activity_operator"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".FunctionActivity"
+            android:label="@string/title_activity_function"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ExtendActivity"
+            android:label="@string/title_activity_extend"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

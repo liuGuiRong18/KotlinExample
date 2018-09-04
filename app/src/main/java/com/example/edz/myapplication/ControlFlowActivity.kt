@@ -43,10 +43,10 @@ class ControlFlowActivity : AppCompatActivity() {
         //1.传统用法
         if (a > b) max = a
         //2.with else
-        if (a > b) {
-            max = a
+        max = if (a > b) {
+            a
         } else {
-            max = b
+            b
         }
         Log.d("ControlFlowActivity.If 表达式", max.toString())
         //3.作为表达式
@@ -105,7 +105,7 @@ class ControlFlowActivity : AppCompatActivity() {
 //        08-27 15:41:48.922 31352-31352/com.example.edz.myapplication D/ControlFlowActivity==in: 4
 //        08-27 15:41:48.922 31352-31352/com.example.edz.myapplication D/ControlFlowActivity==in: 5
         /***
-         * 倒序错误示范
+         * 倒序错误示范  没有输出
          */
         for (i in 5..1) {
             Log.d("ControlFlowActivity==倒序错误示范", i.toString())
