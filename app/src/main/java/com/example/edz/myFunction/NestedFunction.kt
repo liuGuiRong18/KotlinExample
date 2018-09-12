@@ -13,7 +13,6 @@ class User(var name: String, var passWord: String)
 
 @SuppressLint("LongLogTag")
 fun nestedFunction(user: User) {
-    @SuppressLint("LongLogTag")
     fun set(str: String) {
         Log.d("VariableActivity===nestedFunction", "$str ")
     }

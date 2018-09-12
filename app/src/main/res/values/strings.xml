@@ -1,8 +1,9 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">KotlinDemo</string>
     <string name="title_activity_variable">VariableActivity</string>
     <string name="title_activity_control_flow">ControlFlowActivity</string>
     <string name="title_activity_operator">OperatorActivity</string>
     <string name="title_activity_function">FunctionActivity</string>
     <string name="title_activity_extend">ExtendActivity</string>
+    <string name="title_activity_collection">CollectionActivity</string>
 </resources>

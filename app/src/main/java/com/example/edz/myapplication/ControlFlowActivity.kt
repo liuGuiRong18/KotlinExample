@@ -6,6 +6,7 @@ import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.util.SparseIntArray
+import com.example.edz.myapplication.R.id.toolbar
 
 import kotlinx.android.synthetic.main.activity_control_flow.*
 
@@ -43,11 +44,7 @@ class ControlFlowActivity : AppCompatActivity() {
         //1.传统用法
         if (a > b) max = a
         //2.with else
-        max = if (a > b) {
-            a
-        } else {
-            b
-        }
+        max = if (a > b) { a } else { b }
         Log.d("ControlFlowActivity.If 表达式", max.toString())
         //3.作为表达式
         max = if (a > b) a else b

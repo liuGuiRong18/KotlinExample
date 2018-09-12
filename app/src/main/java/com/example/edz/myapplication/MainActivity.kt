@@ -22,9 +22,25 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this@MainActivity, OperatorActivity::class.java)
             startActivity(intent)
         }
+        tv_function.setOnClickListener {
+            val intent = Intent(this@MainActivity, FunctionActivity::class.java)
+            startActivity(intent)
+        }
         tv_extend.setOnClickListener {
             val intent = Intent(this@MainActivity, ExtendActivity::class.java)
             startActivity(intent)
         }
+        tv_collection.setOnClickListener {
+            val intent = Intent(this@MainActivity, CollectionActivity::class.java)
+            startActivity(intent)
+        }
+//        tv_operator.setOnClickListener(object : View.OnClickListener {
+//            override fun onClick(p0: View?) {
+//                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+//            }
+//        })
+//        tv_operator.setOnClickListener { it ->
+//            val id = it?.id }
+
     }
 }

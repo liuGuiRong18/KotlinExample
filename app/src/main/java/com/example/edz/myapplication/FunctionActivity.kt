@@ -4,8 +4,8 @@ import android.annotation.SuppressLint
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
-import android.widget.Button
-import kotlinx.android.synthetic.main.activity_function.*
+import kotlinx.android.synthetic.main.activity_control_flow.*
+
 import java.io.Serializable
 
 /***
@@ -17,7 +17,6 @@ import java.io.Serializable
  * 6.类的继承
  * 7.抽象类
  * 8.接口、接口和抽象类的异同
- *
  */
 class FunctionActivity : AppCompatActivity() {
 
@@ -62,8 +61,8 @@ class FunctionActivity : AppCompatActivity() {
         //成员变量
         var name: String? = "xiaoming"
         var age: Int? = 18
+        //成员方法
         @SuppressLint("LongLogTag")
-                //成员方法
         fun printUser() = Log.d("FunctionActivity.printUser ", "$name+$age")
         //08-31 10:37:33.264 26799-26799/com.example.edz.myapplication D/FunctionActivity.printUser: xiaoming+18
     }
@@ -223,7 +222,7 @@ class FunctionActivity : AppCompatActivity() {
         fun printUser() = Log.d("FunctionActivity.personMinor ", "$name+$age")
     }
 
-    class PersonMinorTwo(var name: String) {
+    class PersonMinorTwo(var name: String="") {
 
         private var age = 0
 
@@ -419,7 +418,7 @@ class FunctionActivity : AppCompatActivity() {
 
     /***
      * 印章类 kotlin新属性
-     *通过enum关键字可以定义一个枚举类，枚举类让一个类拥有了有限多个常量。
+     *  通过enum关键字可以定义一个枚举类，枚举类让一个类拥有了有限多个常量。
      * 通过sealed关键字，则可以定义一个印章类，印章类让一个类拥有了有限多个子类。
      * 印章类甚至可以理解为一个特殊的枚举类。印章类本身不能被实例化。
      *
@@ -500,9 +499,12 @@ class FunctionActivity : AppCompatActivity() {
 //        09-04 10:44:36.411 15081-15081/com.example.edz.myapplication D/FunctionActivity。 extendClass manTwo: 次构函数 给父类赋值来自父类的方法
 //        09-04 10:44:36.411 15081-15081/com.example.edz.myapplication D/FunctionActivity。 extendClass manTwo: 主构函数 给父类赋值来自父类的方法
 
-        val manFour = ManFour("重写父类的方法")
+        var manFour = ManFour("重写父类的方法")
+        var manfive :PersonFour= ManFour("重写父类的方法")//注意和扩展函数对比
         Log.d("FunctionActivity。 extendClass manFour", "${manFour.age.toString() + manFour.setName()}")
-//        09-04 11:25:50.921 18601-18601/com.example.edz.myapplication D/FunctionActivity。 extendClass manFour: 20来自子类ManFour的方法
+        Log.d("FunctionActivity。 extendClass manfive", "${manfive.age.toString() + manfive.setName()}")
+//        09-05 14:01:31.130 17940-17940/com.example.edz.myapplication D/FunctionActivity。 extendClass manFour: 20来自子类ManFour的方法
+//        09-05 14:01:31.130 17940-17940/com.example.edz.myapplication D/FunctionActivity。 extendClass manFour: 20来自子类ManFour的方法
 
     }
 
@@ -556,7 +558,7 @@ class FunctionActivity : AppCompatActivity() {
      * 如果抽象类中含有抽象属性，子类中必须将抽象属性初始化，除非子类也为抽象类。
      */
     @SuppressLint("LongLogTag") private fun abstractClass() {
-        val abatractA = AbatractA()
+        val abatractA= AbatractA()
         Log.d("FunctionActivity。 abstractClass ", "${abatractA.A() + abatractA.B}")
         //abstractClass: 来自子类AbatractA的方法10
 
